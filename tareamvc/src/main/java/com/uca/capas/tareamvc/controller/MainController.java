@@ -34,6 +34,32 @@ public class MainController {
 		String date= dia + "/" + mes + "/"+ year;
 		
 		String Day =LocalDate.of(year, mes, dia).getDayOfWeek().toString();
+		
+		//Pasando a español
+		switch(Day) {
+			case "MONDAY":
+				Day = "Lunes";
+				break;
+			case "TUESDAY":
+				Day = "Martes";
+				break;
+			case "WEDNESDAY":
+				Day = "Miércoles";
+				break;
+			case "THURSDAY":
+				Day = "Jueves";
+				break;
+			case "FRIDAY":
+				Day = "Viernes";
+				break;
+			case "SATURDAY":
+				Day = "Sábado";
+				break;
+			case "SUNDAY":
+				Day = "Domingo";
+				break;
+		}
+		
 		return "El día de la fecha " + date + " es: "+ Day;
 	}
 }
